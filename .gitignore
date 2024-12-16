@@ -1,0 +1,5 @@
+# Ignore Folders
+__pycache__/
+
+# Ignore Files
+JetBrains Mono Bold.ttf
