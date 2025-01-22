@@ -73,7 +73,7 @@ class Player(BaseEntity):
             if self.x < w - self.bound_offset:
                 self.x += self.speed 
 
-    def get_pos(self):
+    def get_pos(self) -> tuple[int, int]:
         return (self.x, self.y)
 
     def damage(self, dmg: int):
@@ -108,7 +108,7 @@ class Enemy(BaseEntity):
         self.x += x * self.speed * .72
         self.y += y * self.speed * .72
 
-    def death(self, target: BaseEntity):
+    def death(self, target: BaseEntity) -> bool:
         if math.hypot(self.x-target.x, self.y-target.y) < self.radius + target.radius:
             return (True)
         return (False)
