@@ -1,10 +1,10 @@
 from random import randint
 
-def random_color(start: int = 0):
+def random_color(start: int = 0) -> tuple[int, int, int]:
     R, G, B = randint(start, 255), randint(start, 255), randint(start, 255)
     return (R,G,B)
 
-def outside_bounds(pos: tuple[int, int], bounds: list[int, int, int, int], offset: int = 0):
+def outside_bounds(pos: tuple[int, int], bounds: list[int, int, int, int], offset: int = 0) -> bool:
     x, y = pos
     a, b, c, d = bounds
 
